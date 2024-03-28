@@ -20,11 +20,13 @@ public class GameManager : MonoBehaviour
     float levelTimer;
     float startTime;
     float currentTime;
+    bool gamePaused;
 
     bool gameActive;
 
     public GameObject levelCompleteMenu;
     public GameObject levelRestartMenu;
+    public GameObject escapeMenu;
 
     int currentSceneIndex;
 
@@ -51,13 +53,32 @@ public class GameManager : MonoBehaviour
         if (playerManager.isPlayerDead() == true)
         {
             levelRestartMenu.SetActive(true);
+            escapeMenu.SetActive(false);
             MenuSettings();
+            
+        }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (gamePaused)
+            {
+                escapeMenu.SetActive(false);
+                GameSettings();
+                gamePaused = false;
+            }
+            else
+            {
+                escapeMenu.SetActive(true);
+                PauseSettings();
+                gamePaused = true;
+            }
             
         }
 
         if (goalCollected.Collected())
         {
             levelCompleteMenu.SetActive(true);
+            escapeMenu.SetActive(false);
             MenuSettings();
         }
 
@@ -88,7 +109,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-
+120ibmw m1
 
     public void RestartGame()
     {
@@ -116,5 +137,28 @@ public class GameManager : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    void PauseSettings()
+    {
+        playerMovement.movementAllowed = false;
+        shootingAllowed = false;
+
+        Time.timeScale = .3f;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    void GameSettings()
+    {
+        playerMovement.movementAllowed = true;
+        shootingAllowed = true;
+
+        Time.timeScale = 1f;
+        gameActive = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
