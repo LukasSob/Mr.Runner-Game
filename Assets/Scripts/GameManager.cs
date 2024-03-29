@@ -109,7 +109,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-120ibmw m1
 
     public void RestartGame()
     {
