@@ -50,43 +50,46 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManager.isPlayerDead() == true)
+        if (currentSceneIndex != 0)
         {
-            levelRestartMenu.SetActive(true);
-            escapeMenu.SetActive(false);
-            MenuSettings();
-            
-        }
-
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            if (gamePaused)
+            if (playerManager.isPlayerDead() == true)
             {
+                levelRestartMenu.SetActive(true);
                 escapeMenu.SetActive(false);
-                GameSettings();
-                gamePaused = false;
+                MenuSettings();
+
             }
-            else
+
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                escapeMenu.SetActive(true);
-                PauseSettings();
-                gamePaused = true;
+                if (gamePaused)
+                {
+                    escapeMenu.SetActive(false);
+                    GameSettings();
+                    gamePaused = false;
+                }
+                else
+                {
+                    escapeMenu.SetActive(true);
+                    PauseSettings();
+                    gamePaused = true;
+                }
+
             }
-            
-        }
 
-        if (goalCollected.Collected())
-        {
-            levelCompleteMenu.SetActive(true);
-            escapeMenu.SetActive(false);
-            MenuSettings();
-        }
+            if (goalCollected.Collected())
+            {
+                levelCompleteMenu.SetActive(true);
+                escapeMenu.SetActive(false);
+                MenuSettings();
+            }
 
-        if (gameActive == true)
-        {
-            levelTimer += Time.deltaTime;
-            DisplayTime(levelTimer);
-             
+            if (gameActive == true)
+            {
+                levelTimer += Time.deltaTime;
+                DisplayTime(levelTimer);
+
+            }
         }
     }
 
@@ -117,11 +120,11 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-
+        Application.Quit();
     }
 
 
-    private void LoadLevel(int levelNum)
+    public void LoadLevel(int levelNum)
     {
         SceneManager.LoadScene(levelNum);
     }
