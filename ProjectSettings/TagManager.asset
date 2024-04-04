@@ -11,6 +11,9 @@ TagManager:
   - Goal
   - WeaponPickup
   - ExplosiveBarrel
+  - Level1
+  - Level2
+  - Level3
   layers:
   - Default
   - TransparentFX
@@ -22,7 +25,7 @@ TagManager:
   - Gun
   - whatIsWall
   - WeaponPickup
-  - 
+  - HeliSound
   - 
   - 
   - 

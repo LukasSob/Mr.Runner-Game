@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2506979574104512670}
   - component: {fileID: 3963768397021083764}
   - component: {fileID: 1739149912619842729}
+  - component: {fileID: 6848135653670602560}
   m_Layer: 0
   m_Name: ExplosiveBarrel
   m_TagString: ExplosiveBarrel
@@ -190,7 +191,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: c4cf2900b1a609248a348ea4109bcc61, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.398
-  m_Pitch: 1
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -264,6 +265,31 @@ AudioSource:
     - serializedVersion: 3
       time: 0
       value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!169 &6848135653670602560
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274710308492998030}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.20418371
       inSlope: 0
       outSlope: 0
       tangentMode: 0

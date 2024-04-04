@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour {
     public Transform orientation;
     public Camera myCamera;
     //MoveCamera camMovement;
-    
+
     //Other
+    [SerializeField] public SceneInfo sceneInfo;
     private Rigidbody rb;
     public bool movementAllowed;
+
 
     //Rotation and look
     private float xRotation;
@@ -63,6 +65,8 @@ public class PlayerMovement : MonoBehaviour {
     }
     
     void Start() {
+        sensitivity = sceneInfo.mouseSens;
+
         playerScale =  transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
