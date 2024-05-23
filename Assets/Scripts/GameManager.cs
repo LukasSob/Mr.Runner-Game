@@ -81,11 +81,6 @@ public class GameManager : MonoBehaviour
             mouseSensSlider.value = sceneInfo.mouseSens; 
 
             Debug.Log("Menu");
-            level1Button = GameObject.FindGameObjectWithTag("Level1");
-            level2Button = GameObject.FindGameObjectWithTag("Level2");
-            level3Button = GameObject.FindGameObjectWithTag("Level3");
-
-            
 
             if (sceneInfo.GetLevelOneAccess() == true)
             {

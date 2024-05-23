@@ -1784,6 +1784,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996768714}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4742646727922290601, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -2202,6 +2206,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996768714}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4742646727922290601, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -4577,6 +4585,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996768714}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4742646727922290601, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -29415,6 +29427,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996768714}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4742646727922290601, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -30165,6 +30181,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996768714}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4742646727922290601, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -30733,8 +30753,8 @@ GameObject:
   - component: {fileID: 1996768721}
   - component: {fileID: 1996768720}
   - component: {fileID: 1996768719}
-  - component: {fileID: 1996768718}
   - component: {fileID: 1996768717}
+  - component: {fileID: 1996768718}
   - component: {fileID: 1996768716}
   - component: {fileID: 1996768715}
   m_Layer: 7

@@ -28074,7 +28074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 959853375}
   rotationSpeed: 100
-  playerShootDistance: 0
+  playerShootDistance: 50
 --- !u!114 &348475309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29534,7 +29534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 959853375}
   rotationSpeed: 100
-  playerShootDistance: 0
+  playerShootDistance: 50
 --- !u!114 &431470591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31684,7 +31684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &541015358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64222,7 +64222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 959853375}
   rotationSpeed: 100
-  playerShootDistance: 0
+  playerShootDistance: 50
 --- !u!114 &1244697528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77248,6 +77248,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 959853375}
+    - target: {fileID: 4708517860520341424, guid: 9f2e3cd194c8d054b89c82f7b8a3b569, type: 3}
+      propertyPath: playerShootDistance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
